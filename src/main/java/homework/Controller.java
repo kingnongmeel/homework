@@ -16,7 +16,6 @@ public class Controller {
 
     public void selectAllMovie() {
         List<DTO> movieList = movieService.selectAllMovie();
-        System.out.println(movieList);
 
         if(movieList != null) {
             printResult.printMovieList(movieList);
@@ -35,5 +34,75 @@ public class Controller {
         } else {
             printResult.printErrorMessage("selectNo");
         }
+    }
+
+    public void registMovie (Map<String, String> parameter) {
+        String title = parameter.get("title");
+        int year = Integer.parseInt(parameter.get("year"));
+        int rating = Integer.parseInt(parameter.get("rating"));
+        int genre = Integer.parseInt(parameter.get("genre"));
+
+        DTO dto = new DTO();
+        dto.setTitle(title);
+        dto.setYear(year);
+        dto.setRating(rating);
+        dto.setGenre(genre);
+
+        if(movieService.registMovie(dto)) {
+            printResult.printSuccessMessage("regist");
+        } else {
+            printResult.printErrorMessage("regist");
+        }
+    }
+
+    public void modifyMovie(Map<String, String> parameter) {
+
+
+        int no = Integer.parseInt(parameter.get("no"));
+        String title = parameter.get("title");
+        int year = Integer.parseInt(parameter.get("year"));
+        int rating = Integer.parseInt(parameter.get("rating"));
+        int genre = Integer.parseInt(parameter.get("genre"));
+
+        DTO dto = new DTO();
+        dto.setNo(no);
+        dto.setTitle(title);
+        dto.setYear(year);
+        dto.setRating(rating);
+        dto.setGenre(genre);
+
+        if(movieService.modifyMovie(dto)) {
+            printResult.printSuccessMessage("modify");
+        } else {
+            printResult.printErrorMessage("modify");
+        }
+
+    }
+
+    public void deleteMovie(Map<String, String> parameter) {
+        int no = Integer.parseInt(parameter.get("no"));
+
+        DTO dto = new DTO();
+        dto.setNo(no);
+
+        if(movieService.deleteMovie(dto)) {
+            printResult.printSuccessMessage("delete");
+        } else {
+            printResult.printErrorMessage("delete");
+        }
+
+    }
+
+    public void yearFind(Map<String, String> parameter) {
+        int result = Integer.parseInt(parameter.get("year"));
+
+        List<DTO> dtos = movieService.findYear(result);
+
+        if(dtos != null ) {
+            printResult.printFindYear(dtos);
+        } else {
+            printResult.printErrorMessage("findYear");
+        }
+
     }
 }

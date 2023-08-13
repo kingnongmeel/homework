@@ -18,6 +18,7 @@ public class Application {
             System.out.println("3. 나의 영화 신규 저장 ");
             System.out.println("4. 나의 영화 수정 ");
             System.out.println("5. 나의 영화 삭제 ");
+            System.out.println("6. 연대별 영화 조회 ");
             System.out.print("메뉴 관리 번호 입력 : ");
             int no = sc.nextInt();
 
@@ -26,14 +27,17 @@ public class Application {
                     controller.selectAllMovie(); break;
                 case 2:
                     controller.selectNoMovie(inputNo()); break;
-//                case 3 : controller.registMovie(); break;
-//                case 4 : controller.modifyMovie(); break;
-//                case 5 : controller.deleteMovie(); break;
+                case 3 : controller.registMovie(inputRegist()); break;
+                case 4 : controller.modifyMovie(modifyMovie()); break;
+                case 5 : controller.deleteMovie(inputDelete()); break;
+                case 6 : controller.yearFind(inputYear()); break;
                 default:
                     System.out.println("잘못된 메뉴를 선택하셨습니다.");
             }
         } while (true);
     }
+
+
 
     private static Map<String, String> inputNo() {
         Scanner sc = new Scanner(System.in);
@@ -42,6 +46,74 @@ public class Application {
 
         Map<String, String> parameter = new HashMap<>();
         parameter.put("no", no);
+
+        return parameter;
+    }
+    private static Map<String, String> inputRegist() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("추가할 영화 제목을 입력하시오 : ");
+        String title = sc.nextLine();
+        System.out.println("추가할 영화 제작 년도를 입력하시오 : ");
+        String year = sc.nextLine();
+        System.out.println("추가할 영화 평점을 입력하시오 : ");
+        String rating = sc.nextLine();
+        System.out.println("추가할 영화 장르를 입력하시오 : ");
+        String genre = sc.nextLine();
+
+        Map<String, String> parameter = new HashMap<>();
+        parameter.put("title", title);
+        parameter.put("year", year);
+        parameter.put("rating", rating);
+        parameter.put("genre", genre);
+
+        return parameter;
+
+    }
+    private static Map<String, String> modifyMovie() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("수정할 영화 넘버 선택 ! : ");
+        String no = sc.nextLine();
+
+        System.out.println("수정할 영화 제목을 입력하시오 : ");
+        String title = sc.nextLine();
+        System.out.println("수정할 영화 제작 년도를 입력하시오 : ");
+        String year = sc.nextLine();
+        System.out.println("수정할 영화 평점을 입력하시오 : ");
+        String rating = sc.nextLine();
+        System.out.println("수정할 영화 장르를 입력하시오 : ");
+        String genre = sc.nextLine();
+
+        Map<String, String> parameter = new HashMap<>();
+
+        parameter.put("no", no);
+        parameter.put("title", title);
+        parameter.put("year", year);
+        parameter.put("rating", rating);
+        parameter.put("genre", genre);
+
+        return parameter;
+    }
+    private static Map<String, String> inputDelete() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("삭제할 영화 넘버를 입력하세요 : ");
+        String no = sc.nextLine();
+
+        Map<String, String> parameter = new HashMap<>();
+        parameter.put("no", no);
+
+        return parameter;
+    }
+
+    private static Map<String, String> inputYear() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("검색할 연대를 입력하시오 (ex.1990,2000,2010) : ");
+        String year = sc.nextLine();
+
+        Map<String, String> parameter = new HashMap<>();
+        parameter.put("year", year);
 
         return parameter;
     }

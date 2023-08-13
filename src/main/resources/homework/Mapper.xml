@@ -23,6 +23,35 @@
         FROM MOVIE_MAIN
     </select>
 
+    <select id="findYear" parameterType="homework.DTO" resultMap="ResultMap1" >
+        SELECT
+            NO
+            , TITLE
+            , YEAR
+            , RATING
+            , GENRE
+        FROM MOVIE_MAIN
+        WHERE YEAR IS NOT NULL
+        <choose>
+            <when test="year == 1990">
+                AND YEAR BETWEEN 1990 AND 1999
+            </when>
+            <when test="year == 2000">
+                AND YEAR BETWEEN 2000 AND 2009
+            </when>
+            <when test="year == 2010">
+                AND YEAR BETWEEN 2010 AND 2019
+            </when>
+            <when test="year == 2020">
+                AND YEAR BETWEEN 2020 AND 2029
+            </when>
+            <otherwise>
+                AND 1=0
+            </otherwise>
+        </choose>
+    </select>
+    
+
     <select id="selectMovieByNo" parameterType="_int" resultMap="ResultMap1">
         SELECT
                 NO
@@ -33,5 +62,39 @@
             FROM MOVIE_MAIN
             WHERE NO = #{ no }
     </select>
+
+    <insert id="registMovie"  parameterType="homework.DTO">
+        INSERT INTO MOVIE_MAIN
+        (
+            TITLE
+            ,YEAR
+            ,RATING
+            ,GENRE
+        )
+        VALUES
+        (
+            #{ title }
+            ,#{ year }
+            ,#{ rating }
+            ,#{ genre }
+        )
+
+
+    </insert>
+
+    <update id="modifyMovie" parameterType="homework.DTO" >
+        UPDATE MOVIE_MAIN
+        SET
+            TITLE = #{ title }
+            ,YEAR = #{ year }
+            ,RATING = #{ rating }
+            ,GENRE = #{ genre }
+        WHERE NO = #{ no }
+    </update>
+
+    <delete id="deleteMovie" parameterType="homework.DTO" >
+        DELETE MOVIE_MAIN
+            WHERE NO = #{ no }
+    </delete>
 
 </mapper>

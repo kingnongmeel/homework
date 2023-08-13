@@ -4,27 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f18d7bb6-5be9-4d4c-b66a-192fa0805198" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/homework/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/homework/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/homework/DTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/homework/Mapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/homework/PrintResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/homework/Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/homework/Template.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/homework/Mapper.xml" afterDir="false" />
+    <list default="true" id="f18d7bb6-5be9-4d4c-b66a-192fa0805198" name="변경" comment="0813 과제">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homework/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homework/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homework/Mapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework/Mapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homework/PrintResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework/PrintResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homework/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/homework/Mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/homework/Mapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +102,20 @@
       <option name="presentableId" value="Default" />
       <updated>1691823820421</updated>
     </task>
+    <task id="LOCAL-00001" summary="0813 과제">
+      <option name="closed" value="true" />
+      <created>1691937066338</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1691937066338</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="0813 과제" />
+    <option name="LAST_COMMIT_MESSAGE" value="0813 과제" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
