@@ -37,5 +37,8 @@ public class PrintResult {
         System.out.println(successMessage);
     }
 
+    public void findRating(List<DTO> dtos) {
+        dtos.forEach(System.out::println);
+    }
 }
 

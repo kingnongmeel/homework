@@ -105,4 +105,21 @@ public class Controller {
         }
 
     }
+
+    public void ratingFind(Map<String, String> parameter) {
+        int rating1 = Integer.parseInt(parameter.get("rating1"));
+        int rating2 = Integer.parseInt(parameter.get("rating2"));
+
+        RatingDTO rdto = new RatingDTO();
+        rdto.setRating1(rating1);
+        rdto.setRating2(rating2);
+
+        List<DTO> dtos = movieService.findRating(rdto);
+
+        if(dtos != null) {
+            printResult.findRating(dtos);
+        } else {
+            printResult.printErrorMessage("ratingFind");
+        }
+    }
 }

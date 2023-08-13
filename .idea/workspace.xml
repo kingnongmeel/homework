@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f18d7bb6-5be9-4d4c-b66a-192fa0805198" name="변경" comment="0813 과제">
+      <change afterPath="$PROJECT_DIR$/src/main/java/homework/RatingDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/homework/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/homework/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework/Controller.java" afterDir="false" />
@@ -43,8 +44,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -110,7 +111,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691937066338</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="0813 과제">
+      <option name="closed" value="true" />
+      <created>1691953722991</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1691953722991</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

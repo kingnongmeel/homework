@@ -19,6 +19,7 @@ public class Application {
             System.out.println("4. 나의 영화 수정 ");
             System.out.println("5. 나의 영화 삭제 ");
             System.out.println("6. 연대별 영화 조회 ");
+            System.out.println("7. 선택한 평점 범위 내 영화 조회 ");
             System.out.print("메뉴 관리 번호 입력 : ");
             int no = sc.nextInt();
 
@@ -31,6 +32,7 @@ public class Application {
                 case 4 : controller.modifyMovie(modifyMovie()); break;
                 case 5 : controller.deleteMovie(inputDelete()); break;
                 case 6 : controller.yearFind(inputYear()); break;
+                case 7 : controller.ratingFind(inputRating()); break;
                 default:
                     System.out.println("잘못된 메뉴를 선택하셨습니다.");
             }
@@ -114,6 +116,20 @@ public class Application {
 
         Map<String, String> parameter = new HashMap<>();
         parameter.put("year", year);
+
+        return parameter;
+    }
+    private static Map<String, String> inputRating() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("검색할 최소 평점을 입력하시오 : ");
+        String rating1 = sc.nextLine();
+        System.out.print("검색할 최대 평점을 입력하시오 : ");
+        String rating2 = sc.nextLine();
+
+        Map<String, String> parameter = new HashMap<>();
+        parameter.put("rating1", rating1);
+        parameter.put("rating2", rating2);
 
         return parameter;
     }

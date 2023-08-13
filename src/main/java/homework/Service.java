@@ -96,4 +96,13 @@ public class Service {
 
         return dtos;
     }
+
+    public List<DTO> findRating(RatingDTO rdto) {
+        SqlSession sqlSession = getSqlSession();
+
+        mapper = sqlSession.getMapper(Mapper.class);
+        List<DTO> dtos = mapper.findRating(rdto);
+
+        return dtos;
+    }
 }

@@ -50,7 +50,17 @@
             </otherwise>
         </choose>
     </select>
-    
+
+    <select id="findRating" parameterType="homework.RatingDTO" resultMap="ResultMap1" >
+        SELECT
+        NO
+        , TITLE
+        , YEAR
+        , RATING
+        , GENRE
+        FROM MOVIE_MAIN
+        WHERE RATING BETWEEN #{ rating1 } AND #{ rating2 }
+    </select>
 
     <select id="selectMovieByNo" parameterType="_int" resultMap="ResultMap1">
         SELECT

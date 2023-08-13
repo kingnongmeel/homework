@@ -14,4 +14,6 @@ public interface Mapper {
     int deleteMovie(DTO dto);
 
     List<DTO> findYear(int result);
+
+    List<DTO> findRating(RatingDTO rdto);
 }
