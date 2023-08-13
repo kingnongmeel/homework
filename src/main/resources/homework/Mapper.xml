@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="homework.Mapper">
+
+    <resultMap id="ResultMap1" type="homework.DTO">
+        <id property="no" column="NO"/>
+        <result property="title" column="Title"/>
+        <result property="year" column="YEAR"/>
+        <result property="rating" column="RATING"/>
+        <result property="genre" column="GENRE"/>
+    </resultMap>
+
+    <select id="selectAllMovie" resultMap="ResultMap1">
+        SELECT
+        NO
+        , TITLE
+        , YEAR
+        , RATING
+        , GENRE
+        FROM MOVIE_MAIN
+    </select>
+
+    <select id="selectMovieByNo" parameterType="_int" resultMap="ResultMap1">
+        SELECT
+                NO
+                ,TITLE
+                ,YEAR
+                ,RATING
+                ,GENRE
+            FROM MOVIE_MAIN
+            WHERE NO = #{ no }
+    </select>
+
+</mapper>
